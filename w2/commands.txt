@@ -1,0 +1,30 @@
+/* Lecture */
+CREATE TABLE Users(
+	name VARCHAR(128),
+	email VARCHAR(128)
+)
+INSERT INTO Users(name,email) VALUES('Kristin','kf@umich.edu')
+DELETE FROM Users WHEN email='ted@umich.edu'
+DELETE FROM Users WHERE email='ted@umich.edu'
+DELETE FROM Users WHERE email='fred@umich.edu'
+UPDATE Users SET name='Charles' WHERE email='csev@umich.edu'
+SELECT * FROM Users
+SELECT * FROM Users WHERE email='csev@umich.edu'
+SELECT * FROM Users ORDER BY email
+SELECT * FROM Users ORDER BY name
+SELECT * FROM Users  ORDER BY name DESC
+SELECT * FROM Users  ORDER BY name ASC
+SELECT COUNT(*) FROM Users
+/* Assignment */
+CREATE TABLE Ages(
+	name VARCHAR(128),
+	age INTEGER
+)
+DELETE FROM Ages
+INSERT INTO Ages (name, age) Values ('Sylvana', 25);
+INSERT INTO Ages (name, age) VALUES ('Candice', 20);
+INSERT INTO Ages (name, age) VALUES ('Sineidin', 19);
+INSERT INTO Ages (name, age) VALUES ('Giuliana', 16);
+INSERT INTO Ages (name, age) VALUES ('Junior', 14);
+INSERT INTO Ages (name, age) VALUES ('Megg', 28);
+SELECT hex(name || age) AS X FROM Ages ORDER BY X
